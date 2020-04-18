@@ -1,0 +1,8 @@
+---
+- name: Include OS family specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+
+- include_tasks: tmds_install.yml
+- include_tasks: tmds_post.yml

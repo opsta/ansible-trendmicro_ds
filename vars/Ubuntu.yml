@@ -1,0 +1,4 @@
+---
+tmds_platform: Ubuntu_
+tmds_download_filename: agent.deb
+tmds_platform_major_version: "{{ ansible_distribution_version }}"

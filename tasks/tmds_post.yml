@@ -1,0 +1,6 @@
+---
+- name: Reset agent configuration
+  command: "{{ tmds_dsa_control_path }} -r"
+
+- name: Activate agent
+  command: "{{ tmds_dsa_control_path }} -a {{ tmds_activation_url }} 'tenantID:{{ tmds_activation_tenant_id }}' 'token:{{ tmds_activation_token }}' 'policyid:{{ tmds_activation_policy_id }}'"

@@ -1,0 +1,9 @@
+---
+tmds_manager_url: https://app.deepsecurity.trendmicro.com:443
+# tmds_download_tenant_id: CHANGEME
+# tmds_activation_tenant_id: CHANGEME
+# tmds_activation_token: CHANGEME
+# tmds_activation_policy_id: CHANGEME
+tmds_download_url: "{{ tmds_manager_url }}/software/agent/{{ tmds_platform }}{{ tmds_platform_major_version }}/{{ ansible_architecture }}/{{ tmds_download_filename }}?tenantID={{ tmds_download_tenant_id }}"
+tmds_dsa_control_path: /opt/ds_agent/dsa_control
+tmds_activation_url: dsm://agents.deepsecurity.trendmicro.com:443/

@@ -1,0 +1,12 @@
+---
+- name: Install Trend Micro Deep Security Agent RPM Package (CentOS, RedHat and Amazon Linux)
+  yum:
+    name: "{{ tmds_download_url }}"
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Install Trend Micro Deep Security Agent DEB Package (Debian and Ubuntu)
+  apt:
+    deb: "{{ tmds_download_url }}"
+    state: present
+  when: ansible_os_family == "Debian"
